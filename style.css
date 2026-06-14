@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    min-height:700px;
+    padding:50px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 20px 50px rgba(0,0,0,0.35);
+}
+.container h1{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    font-size:2.2rem;
+    font-weight:700;
+}
+
+.search-box{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.Search{
+    flex:1;
+    max-width:650px;
+    padding:18px 25px;
+    font-size:18px;
+}
+
+.button{
+    padding:18px 35px;
+    font-size:18px;
+}
+
+.button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+
+#result h2{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    font-size:3rem;
+    font-weight:700;
+}
+
+.weather-cards{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    transition:0.35s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card p{
+    color:#cbd5e1;
+    margin-bottom:15px;
+    font-size:18px;
+    font-weight:500;
+}
+
+.card h3{
+    color:white;
+    font-size:2.2rem;
+    font-weight:700;
+}
+
+/* Card Icon Styling */
+
+.card i{
+    font-size:65px;
+    margin-bottom:20px;
+}
+/* Temperature */
+
+.temp{
+    background:linear-gradient(
+    135deg,
+    #ff7b54,
+    #ff416c
+    );
+}
+
+.temp i{
+    color:#ffe66d;
+    filter:drop-shadow(0 0 8px #ffe66d);
+}
+
+/* Feels Like */
+
+.feels{
+    background:linear-gradient(
+    135deg,
+    #7f5af0,
+    #6246ea
+    );
+}
+
+.feels i{
+    color:#ffd6ff;
+    filter:drop-shadow(0 0 8px #ffd6ff);
+}
+
+/* Humidity */
+
+.humidity{
+    background:linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+    );
+}
+
+.humidity i{
+    color:#00ffff;
+    filter:drop-shadow(0 0 8px #00ffff);
+}
+
+/* Wind */
+
+.wind{
+    background:linear-gradient(
+    135deg,
+    #38bdf8,
+    #2563eb
+    );
+}
+
+.wind i{
+    color:#ffffff;
+    filter:drop-shadow(0 0 8px #ffffff);
+}
+
+/* Clouds */
+
+.cloud{
+    background:linear-gradient(
+    135deg,
+    #64748b,
+    #475569
+    );
+}
+
+.cloud i{
+    color:#f8fafc;
+    filter:drop-shadow(0 0 8px #f8fafc);
+}
+
+/* Weather */
+
+.weather{
+    background:linear-gradient(
+    135deg,
+    #fbbf24,
+    #f97316
+    );
+}
+
+.weather i{
+    color:#fff176;
+    filter:drop-shadow(0 0 8px #fff176);
+}
+
+/* Search Box Upgrade */
+
+.Search:focus{
+    box-shadow:0 0 20px rgba(59,130,246,.4);
+}
+
+/* Smooth Hover */
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}

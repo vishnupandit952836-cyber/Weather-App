@@ -1,110 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(
-        135deg,
-        #0f172a,
-        #1e293b,
-        #334155
-    );
-    padding:20px;
-}
-
-.container{
-    width:100%;
-    max-width:1200px;
-    min-height:700px;
-    padding:50px;
-    border-radius:25px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.15);
-    box-shadow:0 20px 50px rgba(0,0,0,0.35);
-}
-.container h1{
-    text-align:center;
-    color:white;
-    margin-bottom:25px;
-    font-size:2.2rem;
-    font-weight:700;
-}
-
-.search-box{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    margin-bottom:30px;
-}
-
-.Search{
-    flex:1;
-    max-width:650px;
-    padding:18px 25px;
-    font-size:18px;
-}
-
-.button{
-    padding:18px 35px;
-    font-size:18px;
-}
-
-.button:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 25px rgba(59,130,246,0.4);
-}
-
-#result h2{
-    text-align:center;
-    color:white;
-    margin-bottom:25px;
-    font-size:3rem;
-    font-weight:700;
-}
-
-.weather-cards{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:30px;
-}
-
-.card{
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    border-radius:25px;
-    padding:35px;
-    text-align:center;
-    transition:0.35s ease;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.25);
-}
-
-.card p{
-    color:#cbd5e1;
-    margin-bottom:15px;
-    font-size:18px;
-    font-weight:500;
-}
-
-.card h3{
-    color:white;
-    font-size:2.2rem;
-    font-weight:700;
-}
 
 /* Card Icon Styling */
 
@@ -212,4 +106,580 @@ body{
 
 .card:hover{
     transform:translateY(-10px) scale(1.03);
+}
+/* =========================
+   Tablet (1024px and below)
+   ========================= */
+@media (max-width: 1024px) {
+
+    .container{
+        padding:40px 30px;
+    }
+
+    .container h1{
+        font-size:2rem;
+    }
+
+    #result h2{
+        font-size:2.5rem;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .card h3{
+        font-size:1.8rem;
+    }
+}
+
+/* =========================
+   Mobile (768px and below)
+   ========================= */
+@media (max-width: 768px){
+
+    .container{
+        padding:25px;
+        min-height:auto;
+    }
+
+    .container h1{
+        font-size:1.8rem;
+    }
+
+    #result h2{
+        font-size:2rem;
+    }
+
+    .search-box{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .Search{
+        max-width:100%;
+        width:100%;
+        font-size:16px;
+        padding:15px;
+    }
+
+    .button{
+        width:100%;
+        padding:15px;
+        font-size:16px;
+    }
+
+    .weather-cards{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+    .card i{
+        font-size:50px;
+    }
+
+    .card h3{
+        font-size:1.8rem;
+    }
+
+    .card p{
+        font-size:16px;
+    }
+}
+
+/* =========================
+   Small Phones
+   iPhone SE, Android Small
+   ========================= */
+@media (max-width: 480px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:20px 15px;
+        border-radius:18px;
+    }
+
+    .container h1{
+        font-size:1.5rem;
+    }
+
+    #result h2{
+        font-size:1.7rem;
+    }
+
+    .Search{
+        font-size:15px;
+        padding:14px;
+    }
+
+    .button{
+        font-size:15px;
+        padding:14px;
+    }
+
+    .card{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .card i{
+        font-size:40px;
+    }
+
+    .card h3{
+        font-size:1.5rem;
+    }
+
+    .card p{
+        font-size:15px;
+    }
+}
+
+/* =========================
+   Extra Small Phones
+   ========================= */
+@media (max-width: 360px){
+
+    .container h1{
+        font-size:1.3rem;
+    }
+
+    #result h2{
+        font-size:1.4rem;
+    }
+
+    .card h3{
+        font-size:1.3rem;
+    }
+
+    .card i{
+        font-size:35px;
+    }
+} 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+background:linear-gradient(
+    -45deg,
+    #0f172a,
+    #1e293b,
+    #2563eb,
+    #7c3aed
+);
+
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+
+
+}
+
+@keyframes gradientMove{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
+
+.container{
+width:100%;
+max-width:1200px;
+min-height:700px;
+padding:50px;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 20px 50px rgba(0,0,0,0.35);
+transition:0.4s ease;
+}
+
+.container:hover{
+transform:translateY(-5px);
+}
+
+.container h1{
+text-align:center;
+color:white;
+margin-bottom:25px;
+font-size:2.4rem;
+font-weight:700;
+text-shadow:
+0 0 10px rgba(255,255,255,.5),
+0 0 25px rgba(59,130,246,.5);
+}
+
+.search-box{
+display:flex;
+gap:15px;
+justify-content:center;
+margin-bottom:30px;
+}
+
+.Search{
+flex:1;
+max-width:650px;
+padding:18px 25px;
+font-size:18px;
+border:none;
+outline:none;
+border-radius:18px;
+background:rgba(255,255,255,0.12);
+color:white;
+backdrop-filter:blur(10px);
+}
+
+.Search::placeholder{
+color:#cbd5e1;
+}
+
+.Search:focus{
+box-shadow:0 0 20px rgba(59,130,246,.4);
+}
+
+.button{
+padding:18px 35px;
+font-size:18px;
+border:none;
+border-radius:18px;
+cursor:pointer;
+font-weight:700;
+color:white;
+background:linear-gradient(
+135deg,
+#3b82f6,
+#2563eb
+);
+transition:0.3s ease;
+}
+
+.button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+
+#result h2{
+text-align:center;
+color:white;
+margin-bottom:25px;
+font-size:3rem;
+font-weight:700;
+text-shadow:0 0 15px rgba(255,255,255,.3);
+}
+
+.weather-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+position:relative;
+overflow:hidden;
+
+
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:35px;
+text-align:center;
+transition:0.35s ease;
+
+animation:floatCard 4s ease-in-out infinite;
+
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.2),
+transparent
+);
+transition:.6s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+@keyframes floatCard{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-5px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+.card p{
+color:#cbd5e1;
+margin-bottom:15px;
+font-size:18px;
+font-weight:500;
+}
+
+.card h3{
+color:white;
+font-size:2.2rem;
+font-weight:700;
+}
+
+.card i{
+font-size:65px;
+margin-bottom:20px;
+}
+
+/* Temperature */
+.temp{
+background:linear-gradient(135deg,#ff7b54,#ff416c);
+}
+
+.temp i{
+color:#ffe66d;
+filter:drop-shadow(0 0 8px #ffe66d);
+}
+
+/* Feels Like */
+.feels{
+background:linear-gradient(135deg,#7f5af0,#6246ea);
+}
+
+.feels i{
+color:#ffd6ff;
+filter:drop-shadow(0 0 8px #ffd6ff);
+}
+
+/* Humidity */
+.humidity{
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.humidity i{
+color:#00ffff;
+filter:drop-shadow(0 0 8px #00ffff);
+}
+
+/* Wind */
+.wind{
+background:linear-gradient(135deg,#38bdf8,#2563eb);
+}
+
+.wind i{
+color:white;
+filter:drop-shadow(0 0 8px white);
+}
+
+/* Clouds */
+.cloud{
+background:linear-gradient(135deg,#64748b,#475569);
+}
+
+.cloud i{
+color:#f8fafc;
+filter:drop-shadow(0 0 8px #f8fafc);
+}
+
+/* Weather */
+.weather{
+background:linear-gradient(135deg,#fbbf24,#f97316);
+}
+
+.weather i{
+color:#fff176;
+filter:drop-shadow(0 0 8px #fff176);
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+.container{
+    padding:40px 30px;
+}
+
+.container h1{
+    font-size:2rem;
+}
+
+#result h2{
+    font-size:2.5rem;
+}
+
+.card{
+    padding:25px;
+}
+
+.card h3{
+    font-size:1.8rem;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+.container{
+    padding:25px;
+    min-height:auto;
+}
+
+.container h1{
+    font-size:1.8rem;
+}
+
+#result h2{
+    font-size:2rem;
+}
+
+.search-box{
+    flex-direction:column;
+    align-items:stretch;
+}
+
+.Search{
+    max-width:100%;
+    width:100%;
+    font-size:16px;
+    padding:15px;
+}
+
+.button{
+    width:100%;
+    padding:15px;
+    font-size:16px;
+}
+
+.weather-cards{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.card{
+    padding:25px;
+}
+
+.card i{
+    font-size:50px;
+}
+
+.card h3{
+    font-size:1.8rem;
+}
+
+.card p{
+    font-size:16px;
+}
+
+
+}
+
+/* Small Phones */
+@media (max-width:480px){
+}
+body{
+    padding:10px;
+}
+
+.container{
+    padding:20px 15px;
+    border-radius:18px;
+}
+
+.container h1{
+    font-size:1.5rem;
+}
+
+#result h2{
+    font-size:1.7rem;
+}
+
+.Search{
+    font-size:15px;
+    padding:14px;
+}
+
+.button{
+    font-size:15px;
+    padding:14px;
+}
+
+.card{
+    padding:20px;
+    border-radius:18px;
+}
+
+.card i{
+    font-size:40px;
+}
+
+.card h3{
+    font-size:1.5rem;
+}
+
+.card p{
+    font-size:15px;
+}
+
+
+
+
+/* Extra Small Phones */
+@media (max-width:360px){
+
+.container h1{
+    font-size:1.3rem;
+}
+
+#result h2{
+    font-size:1.4rem;
+}
+
+.card h3{
+    font-size:1.3rem;
+}
+
+.card i{
+    font-size:35px;
+}
+
 }
